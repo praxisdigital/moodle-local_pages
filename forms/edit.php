@@ -124,7 +124,7 @@ class pages_edit_product_form extends moodleform {
             get_string(
                 'page_date',
                 'local_pages'
-            ), get_string('to')
+            )
         );
         $mform->setType('pagedate', PARAM_TEXT);
         $mform->addHelpButton('pagedate', 'pagedate_description', 'local_pages');
@@ -234,7 +234,7 @@ class pages_edit_product_form extends moodleform {
     private function build_html_form() {
         global $DB;
         $usertable = $DB->get_record_sql("select * FROM {user}", null, IGNORE_MULTIPLE);
-        $records = json_decode($this->_pagedata);
+        $records = !empty($this->_pagedata) ? json_decode($this->_pagedata) : [];
 
         $limit = (is_countable($records)) ? count($records) : 0;
 

@@ -25,8 +25,8 @@
 
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->requires  = 2021051700; // Moodle 3.11
-$plugin->version   = 2023030800;
-$plugin->release   = '1.9.1';
+$plugin->requires  = 2024042200; // Moodle 4.4
+$plugin->version   = 2025031000;
+$plugin->release   = '1.9.2';
 $plugin->maturity  = MATURITY_STABLE;
 $plugin->component = 'local_pages';

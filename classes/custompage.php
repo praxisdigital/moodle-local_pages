@@ -34,11 +34,7 @@ defined('MOODLE_INTERNAL') || die;
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class custompage {
-
-    /**
-     * @var $_data
-     */
-    private $_data;
+    private object $_data;
 
     /**
      * custompage constructor.
@@ -98,10 +94,22 @@ class custompage {
      * @param string $item
      * @return mixed
      */
-    public function __get($item) {
+    public function __get($item): mixed {
         if (isset($this->_data->$item)) {
             return $this->_data->$item;
         }
+        return null;
+    }
+
+    public function __set($item, $value): void {
+        $this->_data->$item = $value;
+    }
+
+    public function __isset($item): bool {
+        return isset($this->_data->$item);
+    }
+    public function __unset($item): void {
+        unset($this->_data->$item);
     }
 
     /**

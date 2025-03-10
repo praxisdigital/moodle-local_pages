@@ -183,9 +183,16 @@ class local_pages_renderer extends plugin_renderer_base
             $usr = $DB->get_record_sql('SELECT * FROM {user} WHERE id=1');
         }
         foreach ((array)$usr as $key => $details) {
-            if (!is_array($details) && !is_object($details)) {
-                $data = str_ireplace('{' . $key . '}', $details, $data);
+            if ($details === null) {
+                continue;
             }
+            if (is_array($details)) {
+                continue;
+            }
+            if (is_object($details)) {
+                continue;
+            }
+            $data = str_ireplace('{' . $key . '}', $details, $data);
         }
         return $data;
     }
