@@ -189,8 +189,7 @@ function local_pages_extend_navigation(global_navigation $nav) {
  *
  * @return array
  */
-function local_pages_get_fontawesome_icon_map()
-{
+function local_pages_get_fontawesome_icon_map(): array {
     return [
         'local_pages:docs' => 'fa-info-circle',
         'local_pages:help' => 'fa-question-circle text-info',

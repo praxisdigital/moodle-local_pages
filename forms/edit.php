@@ -124,7 +124,8 @@ class pages_edit_product_form extends moodleform {
             get_string(
                 'page_date',
                 'local_pages'
-            )
+            ),
+            get_string('to', 'local_pages')
         );
         $mform->setType('pagedate', PARAM_TEXT);
         $mform->addHelpButton('pagedate', 'pagedate_description', 'local_pages');

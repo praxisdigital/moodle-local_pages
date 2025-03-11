@@ -94,22 +94,22 @@ class custompage {
      * @param string $item
      * @return mixed
      */
-    public function __get($item): mixed {
-        if (isset($this->_data->$item)) {
-            return $this->_data->$item;
+    public function __get(string $name): mixed {
+        if (isset($this->_data->$name)) {
+            return $this->_data->$name;
         }
         return null;
     }
 
-    public function __set($item, $value): void {
-        $this->_data->$item = $value;
+    public function __set(string $name, mixed $value): void {
+        $this->_data->$name = $value;
     }
 
-    public function __isset($item): bool {
-        return isset($this->_data->$item);
+    public function __isset(string $name): bool {
+        return isset($this->_data->$name);
     }
-    public function __unset($item): void {
-        unset($this->_data->$item);
+    public function __unset(string $name): void {
+        unset($this->_data->$name);
     }
 
     /**

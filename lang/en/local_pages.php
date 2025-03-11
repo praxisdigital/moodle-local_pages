@@ -122,6 +122,7 @@ $string['page'] = 'Page';
 $string['form'] = 'Form';
 $string['type'] = 'Type';
 $string['cachedef_sent'] = '';
+$string['to'] = 'To';
 
 $string['numeric'] = "Numeric";
 $string['validemail'] = 'Please supply a valid email address for {$a}';
