@@ -457,8 +457,7 @@ function local_pages_get_fontawesome_icon_map(): array {
         'local_pages:t/block' => 'fa-ban',
         'local_pages:t/block_to_dock_rtl' => 'fa-chevron-right',
         'local_pages:t/block_to_dock' => 'fa-chevron-left',
-        'local_pages:t/calc_off' => 'fa-calculator',
-        // TODO: Change to better icon once we have stacked icon support or more icons.
+        'local_pages:t/calc_off' => 'fa-calculator', // TODO: Change to better icon once we have stacked icon support or more icons.
         'local_pages:t/calc' => 'fa-calculator',
         'local_pages:t/check' => 'fa-check',
         'local_pages:t/cohort' => 'fa-users',

@@ -15,7 +15,7 @@ class hook_callbacks {
      * Add custom head elements.
      *
      * @param \core\hook\output\before_standard_head_html_generation $hook
-     * @see https://github.com/praxisdigital/moodle-local_pages/blob/MOODLE_311_STABLE/lib.php
+     * @see https://github.com/praxisdigital/moodle-local_pages/blob/1cb17ca8f6fd5cb46f1faaacecda6dc84e1ed0dd/lib.php#L542-L580
      */
     public static function standard_head_html(\core\hook\output\before_standard_head_html_generation $hook): void {
         global $CFG, $DB, $PAGE, $SITE;
