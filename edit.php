@@ -82,7 +82,7 @@ if (!$table->is_downloading()) {
 
     echo $renderer->edit_page($pagetoedit);
 }
-if (strtolower($pagetoedit->pagetype) == "form") {
+if (!empty($pagetoedit->pagetype) && strtolower($pagetoedit->pagetype) === "form") {
     $table->out(25, true);
 }
 
